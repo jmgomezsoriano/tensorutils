@@ -1,15 +1,13 @@
-from tensorflow.config.experimental import list_physical_devices
 from logging import getLogger
 from os import environ
 
 logger = getLogger(__name__)
 
 
-def select_cpu_if_not_gpu():
-    """
+def select_cpu_if_not_gpu() -> None:
+    """ Configure the suitable environment variables to use CPU when the GPU is not available for Tensorflow. """
+    from tensorflow.config.experimental import list_physical_devices
 
-    :return:
-    """
     gpus = len(list_physical_devices('GPU'))
     if gpus:
         logger.info(f'Using {gpus} GPUs...')

@@ -40,7 +40,7 @@ setuptools.setup(
         'prepublish': PrepublishCommand,
     },
     name='tensorutils',
-    version='0.0.1',
+    version='0.0.2',
     url='https://github.com/jmgomezsoriano/tensorutils',
     license='LGPL3',
     author='José Manuel Gómez Soriano',
